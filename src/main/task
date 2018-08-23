@@ -1,0 +1,9 @@
+1.park
+    Given a car
+    When parking
+    Then return success
+
+2.pick up
+    Given a car number
+    When pick up
+    Then the car
