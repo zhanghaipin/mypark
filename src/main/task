@@ -6,4 +6,15 @@
 2.pick up
     Given a car number
     When pick up
-    Then the car
+    Then return the car
+
+exercise:
+1.park car in many parks:
+    Given a car
+    When parking
+    Then return success
+
+2.pick up car from parks:
+    Given a car number
+    When pick up
+    Then return the car

@@ -3,7 +3,7 @@ package park;
 import java.util.HashMap;
 import java.util.Map;
 
-public class ParkManager {
+public class ParkingBoy {
 
     private static Map<String,Car> carMap=new HashMap<>();
     private static final int MAX_CAR_NUM=100;
