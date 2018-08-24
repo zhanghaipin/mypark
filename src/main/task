@@ -9,7 +9,7 @@
     Then return the car
 
 exercise:
-1.park car in many parks:
+1.park car in many parks by park order:
     Given a car
     When parking
     Then return success
@@ -18,3 +18,13 @@ exercise:
     Given a car number
     When pick up
     Then return the car
+
+3.park car in many parks by park empty number:
+    Given a car
+    When parking
+    Then return success
+
+4.park car in many parks by park empty rate:
+    Given a car
+    When parking
+    Then return success

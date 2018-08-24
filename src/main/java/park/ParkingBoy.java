@@ -1,12 +1,8 @@
 package park;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
-public class ParkingBoy {
-
-    private List<Park> parks;
+public class ParkingBoy extends Boy{
 
     public String parkCar(Car car){
         for(int i=0;i<parks.size();i++) {
@@ -15,21 +11,6 @@ public class ParkingBoy {
         }
         return null;
     }
-
-    public Car pickCar(String carNum){
-        Car car=null;
-        for(int i=0;i<parks.size();i++) {
-            car= parks.get(i).pickCar(carNum);
-            if(car!=null){break;}
-        }
-        return car;
-    }
-
-    //getter and setter
-    public void setParks(List<Park> parks) {
-        this.parks = parks;
-    }
-
     ///////////////////////////////////////////////////////////////
     private static Map<String,Car> carMap=new HashMap<>();
     private static final int MAX_CAR_NUM=100;
