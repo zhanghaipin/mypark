@@ -11,6 +11,7 @@ public class Park {
     private boolean full;
     private Map<String,Car> carMap;
 
+    private Park(){}
     public Park(String parkName, int maxCarNum) {
         this.parkName = parkName;
         this.maxCarNum = maxCarNum;

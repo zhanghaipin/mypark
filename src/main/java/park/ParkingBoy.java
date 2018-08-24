@@ -2,28 +2,22 @@ package park;
 
 import java.util.*;
 
+/**
+ * park car by parking order
+ */
 public class ParkingBoy extends Boy{
 
-    public String parkCar(Car car){
+    @Override
+    protected Park findPark() {
         for(Park park:parks) {
             if (park.isFull()) {continue;}
-            return park.parkCar(car);
+            return park;
         }
         return null;
     }
 
 
-
-
-
-
-
-
-
-
-
-
-    ///////////////////////////////////////////////////////////////
+    ///////////////////////////Park study 08-23 pm////////////////////////////////////
     private static Map<String,Car> carMap=new HashMap<>();
     private static final int MAX_CAR_NUM=100;
 

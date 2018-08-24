@@ -33,4 +33,15 @@ public class SmartBoyTest {
             Assert.assertNotNull(parkName);
         }
     }
+
+    @Test
+    public void should_return_car_when_input_carNum(){
+        boy.parkCar(new Car("粤C ABC123"));
+        //given
+        String carNum="粤C ABC123";
+        //when
+        Car car= boy.pickCar(carNum);
+        //then
+        Assert.assertNotNull(car);
+    }
 }
