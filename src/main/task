@@ -10,7 +10,7 @@
 
 exercise:
 1.park car in many parks by park order:
-    Given a car
+    Given a car and parking boy
     When park the car
     Then return park name
 
@@ -20,12 +20,12 @@ exercise:
     Then return the car
 
 3.park car in many parks order by park empty number:
-    Given a car
+    Given a car and smart boy
     When parking
     Then the park name that car parking
 
 4.park car in many parks order by park empty rate:
-    Given a car
+    Given a car and super boy
     When parking
     Then the park name that car parking
 
