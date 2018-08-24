@@ -3,19 +3,20 @@ package park;
 import java.util.Collections;
 import java.util.Comparator;
 
+/**
+ * park car by parking empty number
+ */
 public class SmartBoy extends Boy{
-    public String parkCar(Car car){
-        return findParkByEmptyNum().parkCar(car);
-    }
 
-    private Park findParkByEmptyNum() {
+    @Override
+    protected Park findPark() {
         Collections.sort(parks, new Comparator<Park>() {
             @Override
             public int compare(Park p1, Park p2) {
                 return p2.getEmptyCarNum()-p1.getEmptyCarNum();
             }
         });
-        return parks.get(0);
+        Park park=parks.get(0);
+        return park.isFull()?null:park;
     }
-
 }
