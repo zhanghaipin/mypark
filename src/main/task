@@ -11,20 +11,25 @@
 exercise:
 1.park car in many parks by park order:
     Given a car
-    When parking
-    Then return success
+    When park the car
+    Then return park name
 
 2.pick up car from parks:
     Given a car number
-    When pick up
+    When pick up car
     Then return the car
 
-3.park car in many parks by park empty number:
+3.park car in many parks order by park empty number:
     Given a car
     When parking
-    Then return success
+    Then the park name that car parking
 
-4.park car in many parks by park empty rate:
+4.park car in many parks order by park empty rate:
     Given a car
     When parking
-    Then return success
+    Then the park name that car parking
+
+5.find a boy to park car:
+    Given a car and boy name
+    When boy park the car
+    Then the park name that car parking

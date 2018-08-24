@@ -21,29 +21,27 @@ public class Park {
     }
 
     public String parkCar(Car car){
-        if(full){return null;}
+        if(full||carMap.containsKey(car.getNumber())){return null;}
         carMap.put(car.getNumber(),car);
         updateField();
         return parkName;
     }
 
     public Car pickCar(String carNum){
-        if(!carMap.containsKey(carNum)) {return null;}
         Car car = carMap.get(carNum);
-        carMap.remove(carNum);
-        updateField();
+        if(car!=null) {
+            carMap.remove(carNum);
+            updateField();
+        }
         return car;
     }
 
     private void  updateField(){
-        if(carMap.size()==maxCarNum){
-            full=true;
-        }else{
-            full=false;
-        }
+        this.full=(carMap.size()==maxCarNum)?true:false;
         this.emptyCarNum=maxCarNum-carMap.size();
         this.emptyRate=100*((double)emptyCarNum/maxCarNum);
     }
+
     //getter and setter
     public boolean isFull() {
         return full;

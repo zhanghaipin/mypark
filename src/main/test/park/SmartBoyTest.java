@@ -22,14 +22,14 @@ public class SmartBoyTest {
 
 
     @Test
-    public void should_return_parkName_when_input_car(){
+    public void should_return_parkName_when_input_many_car(){
         for(int i=0;i<20;i++) {
             //given
             Car car = new Car("粤C GE43"+i);
             //when
             String parkName = boy.parkCar(car);
             //then
-            System.out.println(parkName);
+            //System.out.println(parkName);
             Assert.assertNotNull(parkName);
         }
     }

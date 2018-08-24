@@ -5,12 +5,24 @@ import java.util.*;
 public class ParkingBoy extends Boy{
 
     public String parkCar(Car car){
-        for(int i=0;i<parks.size();i++) {
-            if (parks.get(i).isFull()) {continue;}
-            return parks.get(i).parkCar(car);
+        for(Park park:parks) {
+            if (park.isFull()) {continue;}
+            return park.parkCar(car);
         }
         return null;
     }
+
+
+
+
+
+
+
+
+
+
+
+
     ///////////////////////////////////////////////////////////////
     private static Map<String,Car> carMap=new HashMap<>();
     private static final int MAX_CAR_NUM=100;

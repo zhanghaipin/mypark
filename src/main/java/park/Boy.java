@@ -9,8 +9,8 @@ public abstract class Boy {
 
     public Car pickCar(String carNum){
         Car car=null;
-        for(int i=0;i<parks.size();i++) {
-            car= parks.get(i).pickCar(carNum);
+        for(Park park:parks) {
+            car= park.pickCar(carNum);
             if(car!=null){break;}
         }
         return car;
